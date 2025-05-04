@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url("images/fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+
+    #loadingScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/fundo-loading.jpg") no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: white; /* opcional, se quiser texto branco */
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #0051ff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 20px 0;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+  
+  
+  #loadingScreen img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  #loadingText {
+    font-size: 18px;
+    color: #ffbb00;
+  }
+  
+  #app {
+    display: none;
+    padding: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+  #nomeUsuario{
+
+    font-size: 1rem;
+  }
+  #app h1{
+    font-size: 1rem;
+  
+  }
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }#bannerRotativo {
+    padding: -1px;
+    width: 100%;
+    max-width: 1080px;
+    aspect-ratio: 3 / 1; /* Mantém proporção 1080x360 */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    
+ 
+  }
+  
+
+  
+  .carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 18s infinite ease-in-out;
+  }
+  
+  @keyframes slide {
+    0%   { transform: translateX(0%); }       /* Banner 1 */
+    20%  { transform: translateX(0%); }
+  
+    25%  { transform: translateX(-100%); }    /* Banner 2 */
+    45%  { transform: translateX(-100%); }
+  
+    50%  { transform: translateX(-200%); }    /* Banner 3 */
+    70%  { transform: translateX(-200%); }
+  
+    75%  { transform: translateX(0%); }       /* Volta ao início suavemente */
+    100% { transform: translateX(0%); }
+  }
+  /* Garantir que o fundo ocupe toda a tela */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Cor de fundo */
+.background {
+  position: fixed; /* Fixa o fundo na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0063AE; /* Exemplo de cor (alterar conforme necessário) */
+  z-index: -1; /* Coloca o fundo atrás de outros elementos */
+}
+/* Estilos do banner rotativo */
+.banner-rotativo {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Defina a altura do banner conforme necessário */
+  background-color: #3498db; /* Cor do fundo do banner (ajuste conforme necessário) */
+  overflow: hidden; /* Impede que qualquer conteúdo saia da área do banner */
+}
+
+/* Estilos das setas */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px; /* Tamanho da seta */
+  color: white; /* Cor das setas */
+  cursor: pointer; /* Indica que são clicáveis */
+  z-index: 1; /* Garante que as setas fiquem acima do conteúdo do banner */
+}
+
+.seta.esquerda {
+  left: 20px; /* Posiciona a seta à esquerda */
+}
+
+.seta.direita {
+  right: 20px; /* Posiciona a seta à direita */
+}
+
+#bannerRotativo {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Oculta as imagens fora da área visível */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Faz o efeito de slide */
+}
+
+#bannerRotativo .carousel-track img {
+  width: 100%; /* Garante que as imagens ocupem toda a largura */
+  height: auto;
+  flex-shrink: 0; /* Impede que as imagens encolham */
+}
+
+#bannerRotativo .carousel-track img:nth-child(1) {
+  opacity: 1; /* Torna o primeiro banner visível ao carregar a página */
+}
+/* Container geral dos produtos */
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+/* Card individual do produto */
+.card-produto {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #feffad;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+  gap: 15px;
+}
+
+.card-produto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do produto */
+.card-produto img.img-produto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Conteúdo textual do card */
+.info-produto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Nome do produto */
+.card-produto h3 {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+/* Descrição do produto */
+.card-produto p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+/* Preço */
+.card-produto strong {
+  font-size: 1.2em;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+/* Botão de compra */
+.card-produto button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.card-produto button:hover {
+  background-color: #388e3c;
+}
