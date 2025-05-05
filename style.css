@@ -336,19 +336,41 @@ body, html {
   }
 }
 
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+  }
+}
 
 #carrinhoFlutuante {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 25px;
+  left: 25px;
   background-color: #ff6600;
   color: white;
-  padding: 14px 18px;
+  padding: 18px 22px;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  animation: pulsar 1.5s infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#carrinhoFlutuante:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.9);
 }
 
 #carrinhoFlutuante span {
