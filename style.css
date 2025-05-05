@@ -148,7 +148,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0063AE; /* Exemplo de cor (alterar conforme necessário) */
+  background-color: #29a2ff; /* Exemplo de cor (alterar conforme necessário) */
   z-index: -1; /* Coloca o fundo atrás de outros elementos */
 }
 /* Estilos do banner rotativo */
