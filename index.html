@@ -8,9 +8,27 @@
 </head>
 
 <body>
- 
+  <!-- Ícone flutuante do carrinho -->
+  <div id="carrinhoFlutuante" onclick="abrirCarrinho()">
+    🛒<span id="contadorCarrinho">0</span>
+  </div>
+
+  <!-- Modal do carrinho -->
+  <div id="modalCarrinho" class="modal-carrinho">
+    <div class="conteudo-carrinho">
+      <button class="fechar" onclick="fecharCarrinho()">×</button>
+      <h2>SEU CARRINHO</h2>
+      <ul id="listaCarrinho"></ul>
+      <div class="total-carrinho">Total: <strong id="totalCarrinho"></strong></div>
+      <button id="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+  </div>
+  
+
+
   <div class="background"></div>
- 
+
+  <!-- Banner rotativo -->
   <div id="bannerRotativo" class="carousel">
     <div class="seta esquerda" onclick="mudarBanner('esquerda')">&#10094;</div>
     <div class="carousel-track">
@@ -20,11 +38,12 @@
     </div>
     <div class="seta direita" onclick="mudarBanner('direita')">&#10095;</div>
   </div>
-   
+
   <!-- Conteúdo do app -->
   <div id="app">
-    <h1>Olá, <span id="nomeUsuario" ></span> Seja Bem vindo!</h1>
+    <h1>Olá, <span id="nomeUsuario"></span> Seja Bem-vindo!</h1>
   </div>
+
   <!-- Container para os cards de produtos -->
   <div id="produtosContainer" class="produtos-container"></div>
 
@@ -50,12 +69,13 @@
       </form>
     </div>
   </div>
+
+  <!-- Botão de Suporte via WhatsApp -->
   <a href="https://wa.me/5511999999999" target="_blank" id="whatsappButton">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
     <span>Suporte</span>
   </a>
-  
-  
+  <div id="toastContainer"></div>
   <script src="https://apis.google.com/js/api.js"></script>
   <script src="script.js"></script>
   <script src="control.js"></script>
