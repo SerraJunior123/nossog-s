@@ -355,14 +355,14 @@ body, html {
   position: fixed;
   bottom: 25px;
   left: 25px;
-  background-color: #ff6600;
+  background-color: #ff9100;
   color: white;
   padding: 18px 22px;
   border-radius: 50%;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(240, 240, 240, 0.3);
   z-index: 1000;
   animation: pulsar 1.5s infinite;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -370,7 +370,7 @@ body, html {
 
 #carrinhoFlutuante:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 25px rgba(255, 102, 0, 0.9);
+  box-shadow: 0 0 25px rgba(255, 187, 0, 0.9);
 }
 
 #carrinhoFlutuante span {
@@ -543,4 +543,38 @@ body, html {
   10%  { opacity: 1; transform: translateX(0); }
   90%  { opacity: 1; transform: translateX(0); }
   100% { opacity: 0; transform: translateX(100%); }
+}
+.footer-app {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0250b6, #4391f8);
+  color: #eee;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 13px;
+  z-index: 999;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.footer-app .footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-app .footer-links {
+  margin-top: 10px;
+}
+
+.footer-app .footer-links a {
+  color: #ff6600;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-app .footer-links a:hover {
+  color: #fff;
 }
